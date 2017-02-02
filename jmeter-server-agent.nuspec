@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if Ω doesn't appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
+    <id>jmeter-server-agent</id>
+    <title>Apache JMeter Server Agent</title>
+    <version>2.2.1.0</version>
+    <authors>Apache Software Foundation</authors>
+    <owners>Scott Baldwin</owners>
+    <summary>The Apache JMeter™ PerfMon Server Agent application is open source software designed to be used on a target server machine to 
+	gather system metrics while the target is under load.</summary>
+    <description>The JMeter PerfMon server agent may be used to gather system metrics and reports them via a simple telnet protocol over either a TCP or UDP port. 
+	Designed to be used with the JMeter PerfMon Metrics Collector which is part of the JMeter Plugins standard set (http://jmeter-plugins.org/wiki/StandardSet/), however, it can be used on its own.
+	
+	I have made the dependeny on "server-jre8" rather than "javaruntime" for 2 main reasons.
+	1. The server agent is designed primarily for monitoring "servers"
+	2. I have had issues installing the javaruntime on "Windows 2012R2 Server Core" machines, which is one of my main use cases.</description>
+    <projectUrl>http://jmeter-plugins.org/wiki/PerfMonAgent/</projectUrl>
+    <tags>jmeter java server-agent perfmon test metrics</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.apache.org/licenses/</licenseUrl> <!-- Yes, this is the license URL linked to on JMeter's page -->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://cdn.rawgit.com/dgfitch/chocolatey-jmeter/master/icons/jmeter.png</iconUrl>
+    <dependencies>
+      <dependency id="server-jre" />
+    </dependencies>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
